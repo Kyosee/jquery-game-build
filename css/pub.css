@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* =reset 网页样式重置
+------------------------------------------------------------------------------------------------------------------------------*/
+html { font-size:1em;-webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-tap-highlight:rgba(0,0,0,0);-webkit-text-size-adjust:none;overflow:-moz-scrollbars-vertical;/*强制firefox出现滑动条*/}
+body { font-size:0.75em;}
+label { cursor:pointer;}
+a:link, a:visited { text-decoration:none;}
+input:focus { outline: none; }
+input,button,select,textarea{outline:none;/*-webkit-appearance:none;*//*强制去除表单自带的样式*/ }
+textarea{resize:none;/*-webkit-appearance:none;*//*强制去除textarea自带的样式*/ }
+
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset; } /*利用阴影来填充掉input自动填充色*/
+
+textarea,input,select { background: none; border:none; margin: 0; padding: 0; }
+
+a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, menu, object, ol, output, p, pre, progress, q, s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, tdvideo, tt,
+u, ul, var { margin:0; padding:0;}
+
+article, aside, footer, header, hgroup, nav, section, figure, figcaption { display: block;} /*html5设置*/
+
+h1, h2, h3, h4, h5, h6, th, td, table, input, button, select, textarea, sub{ font-size:1em;}
+body, input, button, select, textarea, sub{ font-family:Arial, sans-serif;}
+em, cite, address, optgroup { font-style:normal;}
+kbd, samp, code { font-family:monospace;}
+
+img, input, button, select, textarea { vertical-align:middle;outline:none;}
+ul, ol { list-style:none;}
+img, fieldset { border:0;}
+abbr, acronym { cursor:help; border-bottom:1px dotted black;}
+table {	width:100%; border-spacing:0; border:0;}
+table th, table td { border:0;}
+legend, hr { overflow:hidden; position:absolute; top:0; left:0;}
+legend, hr, caption { visibility:hidden; font-size:0; width:0; height:0; line-height:0;}
+
+/**
+ * = global 统一样式
+ *******************************************************************************************************/
+/* 改变动画的效果方式*/
+* {
+  -webkit-transition-timing-function: ease-in-out;
+     -moz-transition-timing-function: ease-in-out;
+      -ms-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+html {height: 100%;}
+body { position: relative; font-family:"微软雅黑"; width: 640px; max-width: 640px; min-width: 640px; height: 100%; margin: 0 auto; padding: 0; }
+body h1,body h2,body h3,body h4,body h5,body h6,body strong,body em {font-weight:normal; } /*微软雅体 将原有的bold属性去掉*/
+textarea:focus,input:focus { border: 1px solid #71b643; }
+
+.hide{ display: none !important;}
+.warpper{ width: 640px; margin: 0 auto; height: 100%; background: url('../static/img/gailou_bg.png') no-repeat;}
+.building{ margin-top: 445px; width:242px; height: auto; max-height: 340px; overflow: hidden; left: 132px; position: absolute; }
+.floor{ background: url(../static/img/louceng.png) no-repeat; height:69px; line-height: 69px; }
+.floor_name{ float: right; margin-right: 40px; font-size: 22px;}
+.avatar{ width: 50px; height: 50px; border-radius: 50px; float: left; margin-left: 46px; margin-top: 10px; }
+.cloud{ z-index: 50; bottom: 0; position: absolute; }
+#buildBtn{ text-align: center; width: 100%;position: absolute; bottom: 0; z-index: 100}
+@media only screen and (max-height: 960px) {
+	.cloud{ z-index: 50; bottom: -72px !important; position: absolute; }
+}
